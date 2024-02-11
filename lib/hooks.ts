@@ -1,7 +1,7 @@
-import { sectionName } from './types';
-import { useActiveSectionContext } from '@/context/ActiveSectionContextProvider';
-import { useEffect } from 'react';
-import { useInView } from 'react-intersection-observer';
+import { sectionName } from "./types";
+import { useActiveSectionContext } from "@/context/ActiveSectionContextProvider";
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
 type useSectionInViewProps = {
   sectionName: sectionName;
@@ -9,7 +9,7 @@ type useSectionInViewProps = {
 
 export function useSectionInView(sectionName: sectionName, threshold = 0.75) {
   const { ref, inView } = useInView({
-    threshold: threshold,
+    threshold,
   });
   const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
 

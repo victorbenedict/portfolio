@@ -3,8 +3,9 @@ import rmtdevImg from '@/public/rmtdev.png';
 import wordanalyticsImg from '@/public/wordanalytics.png';
 import React from 'react';
 import { CgWorkAlt } from 'react-icons/cg';
-import { FaReact } from 'react-icons/fa';
 import { LuGraduationCap } from 'react-icons/lu';
+import { MdSupportAgent } from 'react-icons/md';
+import { SiNextdotjs } from 'react-icons/si';
 
 export const links = [
   {
@@ -39,7 +40,7 @@ export const experiencesData = [
     location: 'Upwork',
     description:
       "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
+    icon: React.createElement(SiNextdotjs),
     date: '2023 - Present',
   },
   {
@@ -47,7 +48,7 @@ export const experiencesData = [
     location: 'Davao City, Philippines',
     description:
       "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
+    icon: React.createElement(MdSupportAgent),
     date: '2018 - 2023',
   },
   {

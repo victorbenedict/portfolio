@@ -1,55 +1,60 @@
-'use client';
+"use client";
 
-import { sendEmail } from '@/actions/sendEmail';
-import { useSectionInView } from '@/lib/hooks';
-import { motion } from 'framer-motion';
-import { RiMailSendLine } from 'react-icons/ri';
-import SectionHeading from './SectionHeading';
+import { sendEmail } from "@/actions/sendEmail";
+import { useSectionInView } from "@/lib/hooks";
+import { motion } from "framer-motion";
+import toast from "react-hot-toast";
+import SectionHeading from "./SectionHeading";
+import SubmitButton from "./SubmitButton";
 
 export default function Contact() {
-  const { ref } = useSectionInView('Contact', 0.75);
+  const { ref } = useSectionInView("Contact", 0.75);
 
   return (
     <motion.section
-      id='contact'
+      id="contact"
       ref={ref}
-      className='mb-20 w-[min(100%,38rem)] sm:mb-28 text-center scroll-mt-28'
+      className="mb-20 w-[min(100%,38rem)] scroll-mt-28 text-center sm:mb-28"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       viewport={{ once: true }}
     >
       <SectionHeading>Contact Me</SectionHeading>
-      <p className='text-stone-700 -mt-6'>
-        Contact me directly at{' '}
-        <a className='underline' href='mailto:victorbenedict.bulaong@gmail.com'>
+      <p className="-mt-6 text-stone-700 dark:text-white/80">
+        Contact me directly at{" "}
+        <a className="underline" href="mailto:victorbenedict.bulaong@gmail.com">
           victorbenedict.bulaong@gmail.com
-        </a>{' '}
+        </a>{" "}
         or fill out the form below
       </p>
-      <form className='mt-10 flex flex-col' action={sendEmail}>
+      <form
+        className="mt-10 flex flex-col dark:text-black"
+        action={async (formData) => {
+          const { data, error } = await sendEmail(formData);
+          if (error) {
+            toast.error(error);
+            return;
+          }
+          toast.success("Email sent successfully");
+        }}
+      >
         <input
-          className='h-14 rounded-lg boarder border-black/15 pl-4'
-          name='senderEmail'
-          type='email'
-          placeholder='Your email'
+          className="boarder h-14 rounded-lg border-black/15 pl-4 transition-all dark:bg-white dark:bg-opacity-80 dark:outline-none dark:focus:bg-opacity-100"
+          name="senderEmail"
+          type="email"
+          placeholder="Your email"
           required
           maxLength={100}
         />
         <textarea
-          className='h-52 my-3 rounded-lg border border-black/15 p-4'
-          name='message'
-          placeholder='Your message'
+          className="my-3 h-52 rounded-lg border border-black/15 p-4 transition-all dark:bg-white dark:bg-opacity-80 dark:outline-none"
+          name="message"
+          placeholder="Your message"
           required
-          maxLength={500}
+          maxLength={5000}
         ></textarea>
-        <button
-          type='submit'
-          className='group flex items-center justify-center gap-2 h-[3rem] w-[8rem]  bg-stone-700 text-white rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-stone-800 active:scale-105 transition'
-        >
-          Submit
-          <RiMailSendLine className='transition-all group-hover:scale-105' />
-        </button>
+        <SubmitButton />
       </form>
     </motion.section>
   );
