@@ -27,7 +27,7 @@ export default function About() {
 
       <p>
         Driven by curiosity for web development, I committed myself to know its
-        fundamentals and frameworks. Now, I'm eager to explore the inner
+        fundamentals and frameworks. Now, I&apos;m eager to explore the inner
         workings of the web development industry.
       </p>
     </motion.section>
