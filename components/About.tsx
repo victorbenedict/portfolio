@@ -1,35 +1,34 @@
-'use client';
+"use client";
 
-import { useSectionInView } from '@/lib/hooks';
-import { motion } from 'framer-motion';
-import SectionHeading from './SectionHeading';
+import { useSectionInView } from "@/lib/hooks";
+import { motion } from "framer-motion";
+import SectionHeading from "./SectionHeading";
 
 export default function About() {
-  const { ref } = useSectionInView('About');
+  const { ref } = useSectionInView("About");
 
   return (
     <motion.section
-      className='mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28'
+      className="mb-28 max-w-[45rem] scroll-mt-28 text-center leading-8 sm:mb-40"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
-      id='about'
+      id="about"
       ref={ref}
     >
       <SectionHeading>About Me</SectionHeading>
-      <p className='mb-3'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-        doloremque eligendi alias, deleniti animi nesciunt culpa? Ea, eum
-        voluptatem. Dolore hic dolor ut vel quos officiis! Perspiciatis quia
-        cumque illo! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Quae beatae possimus nisi commodi incidunt recusandae deserunt aut
-        consequatur ab! Alias odio itaque dolor ipsam impedit debitis deleniti
-        atque! Et, quam.
+      <p className="mb-3">
+        As a Front-End Developer, I want to represent simplicity, adaptability,
+        and effectiveness as core values. My journey began with a degree in
+        Software Development, specializing in desktop applications. I earned my
+        skills through years of experience in network technologies and technical
+        support, earning my Cisco certification along the way.
       </p>
+
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, eum
-        placeat. Neque, est sint similique ut libero deleniti fugit porro
-        dolorum pariatur explicabo doloribus iure unde eligendi quae quas autem.
+        Driven by curiosity for web development, I committed myself to know its
+        fundamentals and frameworks. Now, I'm eager to explore the inner
+        workings of the web development industry.
       </p>
     </motion.section>
   );

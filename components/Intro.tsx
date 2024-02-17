@@ -59,8 +59,10 @@ export default function Intro() {
         I am
         <span className="font-bold"> Victor Benedict</span>. A
         <span className="font-bold"> front-end developer</span>. My focus is{" "}
-        <span className="underline">React</span>(
-        <span className="font-bold">Next.js</span>).
+        <span className="underline">React</span>
+        {" ("}
+        <span className="font-bold ">Next.js</span>
+        {")"}.
       </motion.h1>
       <motion.div
         className="flex flex-col items-center justify-center gap-4 px-4 text-lg font-medium sm:flex-row "
@@ -81,7 +83,7 @@ export default function Intro() {
         </Link>
         <a
           className="dark:hover:text-stone-20 group flex cursor-pointer items-center gap-2 rounded-full border-black/10 bg-white p-7 py-3 text-stone-900 outline-none transition hover:scale-110 hover:bg-stone-100 hover:text-stone-950 focus:scale-110 active:scale-105 active:bg-stone-200 dark:bg-black/30 dark:text-stone-100 dark:hover:bg-black/20"
-          href="/Victor Benedict Bulaong Resume 2024.pdf"
+          href="/Victor Benedict Bulaong Resume.pdf"
           download
         >
           Download Resume{" "}
