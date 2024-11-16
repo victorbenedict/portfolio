@@ -1,6 +1,5 @@
-import rubeeksImg from "@/public/rubeeks.png";
 import queuecallerImg from "@/public/queuecaller.png";
-import sisbrewImg from "@/public/sisbrew.jpg";
+import rubeeksImg from "@/public/rubeeks.png";
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { LuGraduationCap } from "react-icons/lu";
@@ -36,15 +35,15 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Front-end Developer",
-    location: "Upwork",
+    title: "Web Developer",
+    location: "Full Remote",
     description:
-      "I'm now working as a freelancer of a startup company. My stack includes React, Next.js, TypeScript, Tailwind, and Supabase. I'm open to full-time opportunities.",
+      "I'm now working as a full-stack developer of a startup company. My stack includes React, Next.js, Nest.js, TypeScript, Tailwind, Storybook and Supabase.",
     icon: React.createElement(SiNextdotjs),
     date: "2023 - Present",
   },
   {
-    title: "Tier 2 Technical Support",
+    title: "Sr. Advisor II",
     location: "Davao City, Philippines",
     description:
       "I work as a level 2 customer service representative for residential router and other gaming/productivity devices",
@@ -85,6 +84,7 @@ export const projectsData = [
       "Resend",
     ],
     imageUrl: rubeeksImg,
+    link: "https://rubeeks.com/",
   },
   {
     title: "Queue caller",
@@ -92,25 +92,27 @@ export const projectsData = [
       "A simple audio callout application that annouce an order number and other public notifications.",
     tags: ["React", "Tailwind"],
     imageUrl: queuecallerImg,
-  },
-  {
-    title: "SisBrew Coffee and Tea",
-    description: "A coffee shop page of our family business.",
-    tags: ["React", "Next.js", "Tailwind", "Framer", "Resend"],
-    imageUrl: sisbrewImg,
+    link: "https://queue-soundboard.vercel.app/",
   },
 ] as const;
 
 export const skillsData = [
-  "Next.js",
+  "JavaScript",
+  "TypeScript",
   "React",
+  "Next.js",
   "Node.js",
   "Tailwind",
-  "TypeScript",
-  "JavaScript",
+  "Storybook",
+  "Supabase",
+  "TypeORM",
+  "React Hook Form",
+  "TanStack",
+  "Express",
+  "Turborepo",
   "Git",
-  "HTML",
-  "CSS",
-  "Routing and switching protocols",
+  "RestAPI",
+  "TCP/IP",
   "WAN/LAN technologies",
+  "Routing and switching protocols",
 ] as const;

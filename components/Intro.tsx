@@ -83,7 +83,7 @@ export default function Intro() {
         </Link>
         <a
           className="dark:hover:text-stone-20 group flex cursor-pointer items-center gap-2 rounded-full border-black/10 bg-white p-7 py-3 text-stone-900 outline-none transition hover:scale-110 hover:bg-stone-100 hover:text-stone-950 focus:scale-110 active:scale-105 active:bg-stone-200 dark:bg-black/30 dark:text-stone-100 dark:hover:bg-black/20"
-          href="/Victor Benedict Bulaong Resume.pdf"
+          href="/Victor_Benedict_Bulaong_Resume.pdf"
           download
         >
           Download Resume{" "}
