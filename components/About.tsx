@@ -18,17 +18,10 @@ export default function About() {
     >
       <SectionHeading>About Me</SectionHeading>
       <p className="mb-3">
-        As a Front-End Developer, I want to represent simplicity, adaptability,
-        and effectiveness as core values. My journey began with a degree in
-        Software Development, specializing in desktop applications. I earned my
-        skills through years of experience in network technologies and technical
-        support, earning my Cisco certification along the way.
-      </p>
-
-      <p>
-        Driven by curiosity for web development, I committed myself to know its
-        fundamentals and frameworks. Now, I&apos;m eager to explore the inner
-        workings of the web development industry.
+        With over a year of Web Development experience and a degree in Software
+        Development, I’ve honed my skills in front-end and back-end development.
+        My background includes skills in network technologies and technical
+        support.
       </p>
     </motion.section>
   );

@@ -1,4 +1,4 @@
-import queuecallerImg from "@/public/queuecaller.png";
+import xendinImg from "@/public/xendin.png";
 import rubeeksImg from "@/public/rubeeks.png";
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
@@ -36,9 +36,9 @@ export const links = [
 export const experiencesData = [
   {
     title: "Web Developer",
-    location: "Full Remote",
+    location: "Philippines",
     description:
-      "I'm now working as a full-stack developer of a startup company. My stack includes React, Next.js, Nest.js, TypeScript, Tailwind, Storybook and Supabase.",
+      "Developed the company's landing page and invoicing application both front-end and back-end.",
     icon: React.createElement(SiNextdotjs),
     date: "2023 - Present",
   },
@@ -46,7 +46,7 @@ export const experiencesData = [
     title: "Sr. Advisor II",
     location: "Davao City, Philippines",
     description:
-      "I work as a level 2 customer service representative for residential router and other gaming/productivity devices",
+      "Provides support for both customers and customer service representatives",
     icon: React.createElement(MdSupportAgent),
     date: "2018 - 2023",
   },
@@ -54,15 +54,14 @@ export const experiencesData = [
     title: "Network Technical Support",
     location: "Dubai, UAE",
     description:
-      "I worked both post and pre-sales support for industrial grade router, switch and wireless technologies. During my career, I successfully obtained my Cisco CCENT certification",
+      "Implement solution and support for industrial communication projects across the UAE. During the career, I obtained the Cisco CCENT certification",
     icon: React.createElement(CgWorkAlt),
     date: "2014 - 2016",
   },
   {
     title: "Associate's degree in Software Development",
     location: "General Santos City, Philippines",
-    description:
-      "I studied a two-year software development course provided by AMA Computer Learning College.",
+    description: "Obtained the TESDA Programming NC IV certification.",
     icon: React.createElement(LuGraduationCap),
     date: "2012",
   },
@@ -87,12 +86,23 @@ export const projectsData = [
     link: "https://rubeeks.com/",
   },
   {
-    title: "Queue caller",
+    title: "Xendin Invoice App",
     description:
       "A simple audio callout application that annouce an order number and other public notifications.",
-    tags: ["React", "Tailwind"],
-    imageUrl: queuecallerImg,
-    link: "https://queue-soundboard.vercel.app/",
+    tags: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Supabase",
+      "Tailwind",
+      "Flowbite",
+      "Turborepo",
+      "Storybook",
+      "Nest.js",
+      "TypeORM",
+    ],
+    imageUrl: xendinImg,
+    link: "https://dev.xendin.com/",
   },
 ] as const;
 
@@ -110,6 +120,7 @@ export const skillsData = [
   "TanStack",
   "Express",
   "Turborepo",
+  "React Native",
   "Git",
   "RestAPI",
   "TCP/IP",
