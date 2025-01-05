@@ -57,11 +57,12 @@ export default function Intro() {
         animate={{ opacity: 1, y: 0 }}
       >
         <p>
-          <span className="font-bold"> Victor Benedict - Web developer</span>{" "}
+          <span className="font-bold">Victor Benedict</span>
         </p>
         <p>
+          <span className="font-bold">Web Developer - </span>
           <span className="underline">React</span>{" "}
-          <span className="font-bold ">Next.js</span>
+          <span className="font-bold ">(Next.js)</span>
         </p>
       </motion.h1>
       <motion.div

@@ -38,7 +38,7 @@ export const experiencesData = [
     title: "Web Developer",
     location: "Philippines",
     description:
-      "Developed the company's landing page and invoicing application both front-end and back-end.",
+      "Develop company's landing page and invoicing application in both front-end and back-end.",
     icon: React.createElement(SiNextdotjs),
     date: "2023 - Present",
   },
@@ -46,7 +46,7 @@ export const experiencesData = [
     title: "Sr. Advisor II",
     location: "Davao City, Philippines",
     description:
-      "Provides support for both customers and customer service representatives",
+      "Provides advisor support for both customers and customer service representatives",
     icon: React.createElement(MdSupportAgent),
     date: "2018 - 2023",
   },
@@ -70,8 +70,7 @@ export const experiencesData = [
 export const projectsData = [
   {
     title: "Rubeeks Web",
-    description:
-      "A landing for page for a startup company with newsletter subscription form.",
+    description: "A landing page featuring a newsletter subscription form.",
     tags: [
       "React",
       "Next.js",
@@ -87,8 +86,7 @@ export const projectsData = [
   },
   {
     title: "Xendin Invoice App",
-    description:
-      "A simple audio callout application that annouce an order number and other public notifications.",
+    description: "Generates and send invoices online",
     tags: [
       "React",
       "Next.js",
