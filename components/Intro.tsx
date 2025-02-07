@@ -72,12 +72,12 @@ export default function Intro() {
         transition={{ delay: 0.1 }}
       >
         <Link
-          href="#contact"
+          href="mailto:victorbenedictbulaong@gmail.com"
           className="group flex items-center gap-2 rounded-full bg-stone-700 px-7 py-3 text-white outline-none transition hover:scale-110 hover:bg-stone-800 focus:scale-110 active:scale-105 dark:bg-stone-900 dark:hover:bg-stone-800"
-          onClick={() => {
-            setActiveSection("Contact");
-            setTimeOfLastClick(Date.now());
-          }}
+          // onClick={() => {
+          //   setActiveSection("Contact");
+          //   setTimeOfLastClick(Date.now());
+          // }}
         >
           Contact Me
           <BsFillEnvelopeFill className="transition group-hover:scale-110" />{" "}
