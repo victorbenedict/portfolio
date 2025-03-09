@@ -5,7 +5,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export const preventHover = (event: MouseEvent | TouchEvent) => {
+export const preventHover = (event: React.PointerEvent<HTMLButtonElement>) => {
   if (window.innerWidth < 1024) event.preventDefault();
 };
 
