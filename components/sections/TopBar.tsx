@@ -13,17 +13,11 @@ import { cn, preventHover } from '@/lib/utils';
 import Link from 'next/link';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import ThemeToggle from '../ThemeToggle';
-
-const links = [
-  { label: 'About', href: '#about' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Projects', href: '#projects' },
-];
+import { navLinks } from '@/lib/data';
 
 export default function TopBar() {
   return (
-    <NavigationMenu className='max-w-screen justify-end pt-1 lg:justify-center'>
+    <NavigationMenu className='max-w-screen justify-end lg:justify-center mx-4 lg:mx-8 p-2'>
       <NavigationMenuList>
         {/* Hamburger Menu */}
         <NavigationMenuItem className='lg:hidden'>
@@ -34,7 +28,7 @@ export default function TopBar() {
             <GiHamburgerMenu />
           </NavigationMenuTrigger>
           <NavigationMenuContent>
-            {links.map((props, index) => {
+            {navLinks.map((props, index) => {
               return (
                 <Link key={index} href={props.href} legacyBehavior passHref>
                   <NavigationMenuLink
@@ -52,7 +46,7 @@ export default function TopBar() {
         </NavigationMenuItem>
 
         {/* Standard Menu */}
-        {links.map((props, index) => {
+        {navLinks.map((props, index) => {
           return (
             <NavigationMenuItem key={index} className='hidden lg:inline-flex'>
               <Link href={props.href} legacyBehavior passHref>

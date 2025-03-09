@@ -9,3 +9,5 @@ export const preventHover = (event: any) => {
   const e = event as Event;
   if (window.innerWidth < 1024) e.preventDefault();
 };
+
+export const sectionStyle = 'lg:max-w-3xl p-4 lg:mx-auto mx-4 max-w-screen';
