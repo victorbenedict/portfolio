@@ -5,9 +5,8 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export const preventHover = (event: any) => {
-  const e = event as Event;
-  if (window.innerWidth < 1024) e.preventDefault();
+export const preventHover = (event: MouseEvent | TouchEvent) => {
+  if (window.innerWidth < 1024) event.preventDefault();
 };
 
 export const sectionStyle = 'lg:max-w-3xl p-4 lg:mx-auto mx-4 max-w-screen';
