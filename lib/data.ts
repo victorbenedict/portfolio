@@ -207,3 +207,33 @@ export const skills: {
     url: 'https://www.cisco.com/c/en/us/products/ios-nx-os-software/routing-protocols.html',
   },
 ];
+
+export const experiences = [
+  {
+    startDate: '2023',
+    endDate: 'present',
+    location: 'Philippines',
+    company: 'Rubeeks Technologies ',
+    companyUrl: 'https://rubeeks.com/',
+    position: 'Full-stack Developer',
+    description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem necessitatibus nisi omnis fuga repudiandae assumenda sit libero sint dolor quos autem, accusamus laudantium maxime ut animi non officiis aperiam sed.`,
+  },
+  {
+    startDate: '2018',
+    endDate: '2023',
+    location: 'Philippines',
+    company: 'Concentrix',
+    companyUrl: 'https://www.concentrix.com/',
+    position: 'Senior Technical Advisor',
+    description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae distinctio quae perspiciatis exercitationem amet consectetur, ipsa vero fugiat dignissimos! Beatae ipsum reiciendis quas odit quam blanditiis quod quisquam consectetur consequatur.`,
+  },
+  {
+    startDate: '2014',
+    endDate: '2016',
+    location: 'United Arab Emirates',
+    company: 'Easy World Technology',
+    companyUrl: 'https://eworldme.com/',
+    position: 'Network Technical Support',
+    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem hic magni modi autem illo earum inventore eius, vel sunt sit optio a quas, minus, recusandae id aliquid tenetur eos totam. Lorem ipsum dolor sit amet consectetur adipisicing elit.`,
+  },
+];

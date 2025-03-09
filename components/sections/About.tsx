@@ -2,15 +2,16 @@ import { Separator } from '@/components/ui/separator';
 import { socialLinks } from '@/lib/data';
 import { cn, sectionStyle } from '@/lib/utils';
 import Image from 'next/image';
-import { Button } from '../ui/button';
+import ButtonLink from '../ButtonLink';
 
 export default function About() {
   return (
     <>
       <header
+        id='about'
         className={cn(
           sectionStyle,
-          'flex flex-col md:flex-row gap-8 justify-start items-center md:items-start border-b'
+          'flex flex-col md:flex-row gap-8 justify-start items-center md:items-start'
         )}
       >
         <Image
@@ -43,26 +44,21 @@ export default function About() {
           {socialLinks.map((props, index: number) => {
             const Icon = props.icon;
             return (
-              <a
+              <ButtonLink
                 key={index}
-                target='_blank'
+                variant={'ghost'}
+                className='inline-flex underline'
                 href={props.url}
-                rel='noopener noreferrer'
               >
-                <Button
-                  variant={'link'}
-                  className='inline-flex items-center justify-center hover:cursor-pointer'
-                >
-                  <Icon />
-                  {props.label}
-                </Button>
-              </a>
+                <Icon />
+                {props.label}
+              </ButtonLink>
             );
           })}
         </div>
-        <a href='./Victor Benedict Bulaong Resume.pdf' download>
-          <Button className='hover:cursor-pointer'>Download Resume</Button>
-        </a>
+        <ButtonLink href='./Victor Benedict Bulaong Resume.pdf' download>
+          Download Resume
+        </ButtonLink>
       </section>
     </>
   );
