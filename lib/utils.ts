@@ -9,4 +9,5 @@ export const preventHover = (event: React.PointerEvent<HTMLButtonElement>) => {
   if (window.innerWidth < 1024) event.preventDefault();
 };
 
-export const sectionStyle = 'lg:max-w-3xl p-4 lg:mx-auto mx-4 max-w-screen';
+export const sectionStyle =
+  'lg:max-w-3xl p-4 lg:mx-auto mx-4 max-w-screen border-b';

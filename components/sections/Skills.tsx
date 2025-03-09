@@ -10,11 +10,13 @@ export default function Skills() {
       <div className='flex gap-2 flex-wrap py-4'>
         {skills.map((props, index) => {
           return (
-            <a key={index} href={props.url} target='_blank'>
-              <Button
-                variant={'outline'}
-                className='flex justify-center items-center gap-1 rounded-full hover:cursor-pointer '
-              >
+            <Button
+              key={index}
+              variant={'outline'}
+              className='flex justify-center items-center gap-1 rounded-full hover:cursor-pointer'
+              asChild
+            >
+              <a href={props.url} target='_blank'>
                 {props.icon && (
                   <Image
                     className='dark:invert'
@@ -25,8 +27,8 @@ export default function Skills() {
                   />
                 )}
                 <span className='text-sm'>{props.label}</span>
-              </Button>
-            </a>
+              </a>
+            </Button>
           );
         })}
       </div>
