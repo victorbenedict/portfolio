@@ -39,7 +39,7 @@ export default function About() {
           'flex justify-center gap-4 items-center md:justify-between border-b'
         )}
       >
-        <div className='flex flex-col md:flex-row'>
+        <div className='flex flex-col md:flex-row gap-1'>
           {socialLinks.map((props, index: number) => {
             const Icon = props.icon;
             return (
@@ -50,7 +50,7 @@ export default function About() {
                 rel='noopener noreferrer'
               >
                 <Button
-                  variant={'ghost'}
+                  variant={'link'}
                   className='inline-flex items-center justify-center hover:cursor-pointer'
                 >
                   <Icon />
@@ -61,7 +61,7 @@ export default function About() {
           })}
         </div>
         <a href='./Victor Benedict Bulaong Resume.pdf' download>
-          <Button>Download Resume</Button>
+          <Button className='hover:cursor-pointer'>Download Resume</Button>
         </a>
       </section>
     </>
