@@ -17,10 +17,10 @@ import { navLinks } from '@/lib/data';
 
 export default function TopBar() {
   return (
-    <NavigationMenu className='max-w-screen justify-end lg:justify-center mx-4 lg:mx-8 p-2'>
+    <NavigationMenu className='max-w-screen justify-end md:justify-center mx-4 lg:mx-8 p-2'>
       <NavigationMenuList>
         {/* Hamburger Menu */}
-        <NavigationMenuItem className='lg:hidden'>
+        <NavigationMenuItem className='md:hidden'>
           <NavigationMenuTrigger
             onPointerMove={preventHover}
             onPointerLeave={preventHover}
@@ -48,7 +48,7 @@ export default function TopBar() {
         {/* Standard Menu */}
         {navLinks.map((props, index) => {
           return (
-            <NavigationMenuItem key={index} className='hidden lg:inline-flex'>
+            <NavigationMenuItem key={index} className='hidden md:inline-flex'>
               <Link href={props.href} legacyBehavior passHref>
                 <NavigationMenuLink
                   className={cn(navigationMenuTriggerStyle())}

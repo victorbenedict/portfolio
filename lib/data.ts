@@ -1,3 +1,5 @@
+import rubeeksImg from '@/public/projects/rubeeks.png';
+import xendinImg from '@/public/projects/xendin.png';
 import { FaGithub, FaLinkedin, FaGitlab } from 'react-icons/fa';
 
 export const navLinks = [
@@ -5,6 +7,7 @@ export const navLinks = [
   { label: 'Skills', href: '#skills' },
   { label: 'Experience', href: '#experience' },
   { label: 'Projects', href: '#projects' },
+  { label: 'Contact', href: '#contact' },
 ];
 
 export const socialLinks = [
@@ -55,7 +58,7 @@ export const skills: {
     alt: 'React logo',
   },
   {
-    label: 'Tailwind',
+    label: 'Tailwind CSS',
     url: 'https://tailwindcss.com/',
     icon: './logos/tailwindcss.svg',
     alt: 'Tailwind CSS logo',
@@ -185,6 +188,12 @@ export const skills: {
     alt: 'DBeaver logo',
   },
   {
+    label: 'Photopea',
+    url: 'https://www.photopea.com/',
+    icon: './logos/photopea.svg',
+    alt: 'Photopea logo',
+  },
+  {
     label: 'Figma',
     url: 'https://www.figma.com/',
     icon: './logos/figma.svg',
@@ -203,7 +212,7 @@ export const skills: {
     url: 'https://www.cisco.com/c/en/us/solutions/enterprise-networks/lan-wan.html',
   },
   {
-    label: 'Routing and Switching Protocols',
+    label: 'Routing and Switching',
     url: 'https://www.cisco.com/c/en/us/products/ios-nx-os-software/routing-protocols.html',
   },
 ];
@@ -235,5 +244,46 @@ export const experiences = [
     companyUrl: 'https://eworldme.com/',
     position: 'Network Technical Support',
     description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem hic magni modi autem illo earum inventore eius, vel sunt sit optio a quas, minus, recusandae id aliquid tenetur eos totam. Lorem ipsum dolor sit amet consectetur adipisicing elit.`,
+  },
+];
+
+export const projects = [
+  {
+    title: 'Rubeeks Web',
+    url: 'https://rubeeks.com/',
+    description: `A static single page represents the startup company's services and its founders. It features an email subscription form, a database, and web analytics.`,
+    imageSrc: rubeeksImg,
+    imageAlt: 'Picture of Rubeeks website',
+    techStack: [
+      'Next.js',
+      'Tailwind CSS',
+      'Resend',
+      'Supabase',
+      'Google Analytics',
+      'reCAPTCHA',
+      'Kubernetes',
+      'DigitalOcean',
+    ],
+  },
+  {
+    title: 'Xendin Invoice App',
+    url: 'https://dev.xendin.com/',
+    description:
+      'Invoice software for small businesses that generates digital invoices. It includes the management of customer data, products, and payments.',
+    imageSrc: xendinImg,
+    imageAlt: 'Picture of Xendin App',
+    techStack: [
+      'Next.js',
+      'Tailwind CSS',
+      'Turborepo',
+      'Storybook',
+      'TanStack',
+      'React Hook Form',
+      'Nest.js',
+      'TypeORM',
+      'Supabase',
+      'Jest',
+      'AuthGuard',
+    ],
   },
 ];

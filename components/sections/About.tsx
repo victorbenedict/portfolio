@@ -3,6 +3,8 @@ import { socialLinks } from '@/lib/data';
 import { cn, sectionStyle } from '@/lib/utils';
 import Image from 'next/image';
 import ButtonLink from '../ButtonLink';
+import { Button } from '../ui/button';
+import Link from 'next/link';
 
 export default function About() {
   return (
@@ -23,7 +25,7 @@ export default function About() {
           className='rounded-full border'
         />
         <div>
-          <h1 className='mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl lg:text-6xl border-b-1'>
+          <h1 className='mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-6xl border-b-1'>
             Victor Benedict
           </h1>
           <h2>Full-stack Developer</h2>
@@ -56,9 +58,14 @@ export default function About() {
             );
           })}
         </div>
-        <ButtonLink href='./Victor Benedict Bulaong Resume.pdf' download>
-          Download Resume
-        </ButtonLink>
+        <div className='flex gap-4'>
+          <Button asChild>
+            <Link href={'#contact'}>Contact Me</Link>
+          </Button>
+          <ButtonLink href='./Victor Benedict Bulaong Resume.pdf' download>
+            Download Resume
+          </ButtonLink>
+        </div>
       </section>
     </>
   );

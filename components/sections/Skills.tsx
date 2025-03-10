@@ -5,15 +5,15 @@ import { Button } from '../ui/button';
 
 export default function Skills() {
   return (
-    <section className={cn(sectionStyle)} id='skills'>
+    <section id='skills' className={cn(sectionStyle)}>
       <h2 className='text-lg font-semibold'>Skills</h2>
-      <div className='flex gap-2 flex-wrap py-4'>
+      <div className='grid gap-2 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 py-4'>
         {skills.map((props, index) => {
           return (
             <Button
               key={index}
               variant={'outline'}
-              className='flex justify-center items-center gap-1 rounded-full hover:cursor-pointer'
+              className='flex justify-center items-center gap-1.5 rounded-full hover:cursor-pointer'
               asChild
             >
               <a href={props.url} target='_blank'>
@@ -26,7 +26,7 @@ export default function Skills() {
                     alt={props.alt || 'logo'}
                   />
                 )}
-                <span className='text-sm'>{props.label}</span>
+                <span className='text-xs'>{props.label}</span>
               </a>
             </Button>
           );
