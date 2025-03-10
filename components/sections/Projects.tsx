@@ -23,7 +23,6 @@ import { FaExternalLinkAlt } from 'react-icons/fa';
 import Zoom from 'react-medium-image-zoom';
 import 'react-medium-image-zoom/dist/styles.css';
 import { Badge } from '../ui/badge';
-import { Separator } from '@/components/ui/separator';
 
 export default function Projects() {
   return (
