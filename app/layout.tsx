@@ -1,10 +1,11 @@
+import { ThemeProvider } from '@/components/ThemeProvider';
+import { Toaster } from '@/components/ui/sonner';
 import type { Metadata } from 'next';
 import './globals.css';
-import { ThemeProvider } from '@/components/ThemeProvider';
 
 export const metadata: Metadata = {
   title: 'Victor Benedict',
-  description: 'Full-stack Web Developer',
+  description: 'Web Developer',
 };
 
 export default function RootLayout({
@@ -23,6 +24,7 @@ export default function RootLayout({
         >
           {children}
         </ThemeProvider>
+        <Toaster />
       </body>
     </html>
   );

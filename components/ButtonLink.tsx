@@ -1,6 +1,6 @@
 import { cn } from '@/lib/utils';
 import { VariantProps } from 'class-variance-authority';
-import React from 'react';
+import React, { HTMLAttributeAnchorTarget } from 'react';
 import { Button, buttonVariants } from './ui/button';
 
 interface ButtonLinkProps extends VariantProps<typeof buttonVariants> {
@@ -8,6 +8,7 @@ interface ButtonLinkProps extends VariantProps<typeof buttonVariants> {
   className?: string;
   href: string;
   download?: boolean;
+  target?: HTMLAttributeAnchorTarget;
 }
 
 export default function ButtonLink({
@@ -15,6 +16,7 @@ export default function ButtonLink({
   className,
   href,
   download = false,
+  target = '_blank',
   ...props
 }: ButtonLinkProps) {
   return (
@@ -28,7 +30,7 @@ export default function ButtonLink({
     >
       <a
         href={href}
-        target='_blank'
+        target={target}
         rel='noopener noreferrer'
         download={download}
       >

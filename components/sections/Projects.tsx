@@ -27,8 +27,9 @@ import { Badge } from '../ui/badge';
 export default function Projects() {
   return (
     <section id='projects' className={cn(sectionStyle)}>
-      <h2 className='text-lg font-semibold mb-4'>Skills</h2>
+      <h2 className='text-lg font-semibold'>Projects</h2>
       <Carousel
+        className='py-4'
         plugins={[
           Autoplay({
             delay: 6000,
@@ -50,15 +51,15 @@ export default function Projects() {
               <CarouselItem key={index}>
                 <Card key={index} className='h-full justify-start'>
                   <CardHeader>
-                    <CardTitle>
-                      <span>{title}</span>{' '}
+                    <CardTitle className='justify-between inline-flex flex-row'>
+                      <span>{title}</span>
                       <a
                         href={url}
                         target='_blank'
                         rel='noopener noreferrer'
-                        className='inline-block'
+                        // className='inline-block'
                       >
-                        <FaExternalLinkAlt className='text-xs' />
+                        <FaExternalLinkAlt />
                       </a>
                     </CardTitle>
                     <CardDescription>{description}</CardDescription>

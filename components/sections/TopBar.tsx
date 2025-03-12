@@ -34,7 +34,7 @@ export default function TopBar() {
                   <NavigationMenuLink
                     className={cn(
                       navigationMenuTriggerStyle(),
-                      'w-full items-start'
+                      'w-full items-start font-medium'
                     )}
                   >
                     {props.label}

@@ -1,10 +1,8 @@
 import { Separator } from '@/components/ui/separator';
-import { socialLinks } from '@/lib/data';
+import { admin, socialLinks } from '@/lib/data';
 import { cn, sectionStyle } from '@/lib/utils';
 import Image from 'next/image';
 import ButtonLink from '../ButtonLink';
-import { Button } from '../ui/button';
-import Link from 'next/link';
 
 export default function About() {
   return (
@@ -17,8 +15,8 @@ export default function About() {
         )}
       >
         <Image
-          src='https://github.com/victorbenedict.png'
-          alt='Photo of Victor Benedict Bulaong'
+          src={admin.photoUrl}
+          alt={`Photo of ${admin.name}`}
           width={150}
           height={150}
           priority={true}
@@ -26,9 +24,9 @@ export default function About() {
         />
         <div>
           <h1 className='mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-6xl border-b-1'>
-            Victor Benedict
+            {admin.name}
           </h1>
-          <h2>Full-stack Developer</h2>
+          <h2>{admin.jobTitle}</h2>
           <div className='flex h-5 items-center space-x-4 font-semibold'>
             <div>React</div>
             <Separator orientation='vertical' />
@@ -58,10 +56,10 @@ export default function About() {
             );
           })}
         </div>
-        <div className='flex gap-4'>
-          <Button asChild>
-            <Link href={'#contact'}>Contact Me</Link>
-          </Button>
+        <div className='flex flex-col md:flex-row gap-4'>
+          <ButtonLink href={'#contact'} target='_self'>
+            Contact Me
+          </ButtonLink>
           <ButtonLink href='./Victor Benedict Bulaong Resume.pdf' download>
             Download Resume
           </ButtonLink>
