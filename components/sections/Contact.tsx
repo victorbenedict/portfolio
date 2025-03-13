@@ -1,14 +1,5 @@
 'use client';
-import { cn, sectionStyle } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
 import {
   Form,
   FormControl,
@@ -18,11 +9,14 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
-import { z } from 'zod';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
 import { Textarea } from '@/components/ui/textarea';
+import { cn, sectionStyle } from '@/lib/utils';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { Loader2 } from 'lucide-react';
+import React from 'react';
+import { useForm } from 'react-hook-form';
 import { toast } from 'sonner';
+import { z } from 'zod';
 
 const formSchema = z.object({
   name: z
@@ -47,19 +41,32 @@ export default function Contact() {
       message: '',
     },
   });
+  const { isSubmitting } = form.formState;
+
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    const response = await fetch('/api/send', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(values),
-    });
-
-    console.log('Status Code:', response.status);
-
-    toast('Event has been created', {
-      description: 'Sunday, December 03, 2023 at 9:00 AM',
-    });
+    try {
+      await new Promise<void>((resolve, reject) => {
+        setTimeout(() => {
+          if (Math.random() > 0.5) {
+            resolve();
+            toast.success('Success: Message sent!');
+          } else {
+            reject(new Error('Server error: Unable to send message'));
+          }
+        }, 2000);
+      });
+    } catch (error) {
+      if (error instanceof Error) {
+        toast.error(error.message);
+      } else {
+        toast.error('Unknown error occurred');
+      }
+    }
   }
+
+  React.useEffect(() => {
+    console.log('isSubmitting', isSubmitting);
+  }, [isSubmitting]);
 
   return (
     <section id='contact' className={cn(sectionStyle)}>
@@ -107,7 +114,19 @@ export default function Contact() {
               </FormItem>
             )}
           />
-          <Button type='submit'>Send message</Button>
+          <Button
+            type='submit'
+            className='w-40 hover:cursor-pointer'
+            disabled={isSubmitting}
+          >
+            {isSubmitting ? (
+              <>
+                <Loader2 className='animate-spin' /> Sending message...
+              </>
+            ) : (
+              'Send message'
+            )}
+          </Button>
         </form>
       </Form>
     </section>

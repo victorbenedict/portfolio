@@ -1,9 +1,11 @@
+import { admin } from '@/lib/data';
 import {
   Body,
   Container,
   Head,
   Hr,
   Html,
+  Link,
   Preview,
   Text,
 } from '@react-email/components';
@@ -26,7 +28,11 @@ export const NotficationEmail = ({
       <Container style={container}>
         <Text style={paragraph}>Hi {recipient},</Text>
         <Text style={paragraph}>
-          Thank you for reaching out through my portfolio!
+          Thank you for reaching out through my{' '}
+          <Link href='https://victorbenedict-portfolio.vercel.app/'>
+            portfolio
+          </Link>
+          !
         </Text>
         <Text style={paragraph}>Here’s what you sent:</Text>
         <Container style={messageContainer}>
