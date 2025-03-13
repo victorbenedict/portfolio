@@ -45,22 +45,18 @@ export default function Contact() {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
-      await new Promise<void>((resolve, reject) => {
-        setTimeout(() => {
-          if (Math.random() > 0.5) {
-            resolve();
-            toast.success('Success: Message sent!');
-          } else {
-            reject(new Error('Server error: Unable to send message'));
-          }
-        }, 2000);
+      const res = await fetch('/api/send', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(values),
       });
-    } catch (error) {
-      if (error instanceof Error) {
-        toast.error(error.message);
-      } else {
-        toast.error('Unknown error occurred');
-      }
+
+      const result = await res.json();
+      if (!res.ok) throw new Error(result.error || 'Something went wrong');
+
+      toast.success('Message sent!');
+    } catch (error: any) {
+      toast.error(error.message || 'Failed to submit');
     }
   }
 
