@@ -10,7 +10,7 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { cn, sectionStyle } from '@/lib/utils';
+import { cn, sectionStyle, sectionTitleStyle } from '@/lib/utils';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Loader2 } from 'lucide-react';
 import React from 'react';
@@ -66,9 +66,12 @@ export default function Contact() {
 
   return (
     <section id='contact' className={cn(sectionStyle)}>
-      <h2 className='text-lg font-semibold mb-4'>Contact Me</h2>
+      <h2 className={sectionTitleStyle}>Contact Me</h2>
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-8'>
+        <form
+          onSubmit={form.handleSubmit(onSubmit)}
+          className='space-y-8 mx-auto max-w-md'
+        >
           <FormField
             control={form.control}
             name='name'
@@ -76,7 +79,11 @@ export default function Contact() {
               <FormItem>
                 <FormLabel>Name</FormLabel>
                 <FormControl>
-                  <Input placeholder='Your name.' {...field} />
+                  <Input
+                    placeholder='Your name.'
+                    autoComplete='name'
+                    {...field}
+                  />
                 </FormControl>
 
                 <FormMessage />
@@ -90,7 +97,11 @@ export default function Contact() {
               <FormItem>
                 <FormLabel>Email address</FormLabel>
                 <FormControl>
-                  <Input placeholder='example@mail.com' {...field} />
+                  <Input
+                    placeholder='example@mail.com'
+                    autoComplete='email'
+                    {...field}
+                  />
                 </FormControl>
 
                 <FormMessage />
@@ -104,7 +115,11 @@ export default function Contact() {
               <FormItem>
                 <FormLabel>Message</FormLabel>
                 <FormControl>
-                  <Textarea placeholder='Type your message here.' {...field} />
+                  <Textarea
+                    placeholder='Type your message here.'
+                    autoComplete='message'
+                    {...field}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>

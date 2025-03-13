@@ -10,4 +10,6 @@ export const preventHover = (event: React.PointerEvent<HTMLButtonElement>) => {
 };
 
 export const sectionStyle =
-  'md:max-w-3xl p-4 md:mx-auto mx-4 max-w-screen border-b';
+  'md:max-w-3xl p-4 md:mx-auto mx-4 max-w-screen border-b pb-12';
+
+export const sectionTitleStyle = 'text-lg font-semibold pb-6';

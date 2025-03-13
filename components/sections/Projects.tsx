@@ -16,7 +16,7 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 import { projects } from '@/lib/data';
-import { cn, sectionStyle } from '@/lib/utils';
+import { cn, sectionStyle, sectionTitleStyle } from '@/lib/utils';
 import Autoplay from 'embla-carousel-autoplay';
 import Image from 'next/image';
 import { FaExternalLinkAlt } from 'react-icons/fa';
@@ -27,7 +27,7 @@ import { Badge } from '../ui/badge';
 export default function Projects() {
   return (
     <section id='projects' className={cn(sectionStyle)}>
-      <h2 className='text-lg font-semibold'>Projects</h2>
+      <h2 className={sectionTitleStyle}>Projects</h2>
       <Carousel
         className='py-4'
         plugins={[
