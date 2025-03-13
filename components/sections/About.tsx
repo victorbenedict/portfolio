@@ -1,72 +1,62 @@
 import { Separator } from '@/components/ui/separator';
-import { socialLinks } from '@/lib/data';
+import { admin, socialLinks } from '@/lib/data';
 import { cn, sectionStyle } from '@/lib/utils';
 import Image from 'next/image';
 import ButtonLink from '../ButtonLink';
-import { Button } from '../ui/button';
+import { buttonVariants } from '@/components/ui/button';
 import Link from 'next/link';
 
 export default function About() {
   return (
-    <>
-      <header
-        id='about'
-        className={cn(
-          sectionStyle,
-          'flex flex-col md:flex-row gap-8 justify-start items-center md:items-start'
-        )}
-      >
-        <Image
-          src='https://github.com/victorbenedict.png'
-          alt='Photo of Victor Benedict Bulaong'
-          width={150}
-          height={150}
-          priority={true}
-          className='rounded-full border'
-        />
+    <header
+      id='about'
+      className={cn(
+        sectionStyle,
+        'flex flex-col gap-8 justify-start items-center'
+      )}
+    >
+      <Image
+        src={admin.photoUrl}
+        alt={`Photo of ${admin.name}`}
+        width={150}
+        height={150}
+        priority={true}
+        className='rounded-full border'
+      />
+      <div>
+        <h1 className='mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-6xl'>
+          {admin.name}
+        </h1>
+        <Separator />
         <div>
-          <h1 className='mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-6xl border-b-1'>
-            Victor Benedict
-          </h1>
-          <h2>Full-stack Developer</h2>
-          <div className='flex h-5 items-center space-x-4 font-semibold'>
-            <div>React</div>
-            <Separator orientation='vertical' />
-            <div>Next.js</div>
+          <h2 className='text-lg md:text-xl font-bold text-center'>
+            {admin.jobTitle}
+          </h2>
+          <div className='flex flex-col sm:flex-row gap-1 justify-center'>
+            {socialLinks.map((props, index: number) => {
+              const Icon = props.icon;
+              return (
+                <Link
+                  key={index}
+                  className={buttonVariants({ variant: 'link' })}
+                  href={props.url}
+                >
+                  <Icon />
+                  {props.label}
+                </Link>
+              );
+            })}
           </div>
         </div>
-      </header>
-      <section
-        className={cn(
-          sectionStyle,
-          'flex justify-center gap-4 items-center md:justify-between border-b'
-        )}
-      >
-        <div className='flex flex-col md:flex-row gap-1'>
-          {socialLinks.map((props, index: number) => {
-            const Icon = props.icon;
-            return (
-              <ButtonLink
-                key={index}
-                variant={'ghost'}
-                className='inline-flex underline'
-                href={props.url}
-              >
-                <Icon />
-                {props.label}
-              </ButtonLink>
-            );
-          })}
-        </div>
-        <div className='flex gap-4'>
-          <Button asChild>
-            <Link href={'#contact'}>Contact Me</Link>
-          </Button>
-          <ButtonLink href='./Victor Benedict Bulaong Resume.pdf' download>
-            Download Resume
-          </ButtonLink>
-        </div>
-      </section>
-    </>
+      </div>
+      <div className='flex flex-col sm:flex-row gap-4'>
+        <ButtonLink href={'#contact'} target='_self'>
+          Contact Me
+        </ButtonLink>
+        <ButtonLink href='./Victor Benedict Bulaong Resume.pdf' download>
+          Download Resume
+        </ButtonLink>
+      </div>
+    </header>
   );
 }

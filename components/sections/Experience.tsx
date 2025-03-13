@@ -1,4 +1,4 @@
-import { cn, sectionStyle } from '@/lib/utils';
+import { cn, sectionStyle, sectionTitleStyle } from '@/lib/utils';
 import ButtonLink from '../ButtonLink';
 import { experiences } from '@/lib/data';
 import React from 'react';
@@ -6,7 +6,7 @@ import React from 'react';
 export default function Experience() {
   return (
     <section id='experience' className={cn(sectionStyle)}>
-      <h2 className='text-lg font-semibold mb-4'>Experience</h2>
+      <h2 className={sectionTitleStyle}>Experience</h2>
       {experiences.map((props, index) => {
         const {
           startDate,

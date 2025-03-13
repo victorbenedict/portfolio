@@ -2,6 +2,14 @@ import rubeeksImg from '@/public/projects/rubeeks.png';
 import xendinImg from '@/public/projects/xendin.png';
 import { FaGithub, FaLinkedin, FaGitlab } from 'react-icons/fa';
 
+export const admin = {
+  name: 'Victor Benedict',
+  jobTitle: 'Web Developer',
+  focusStack: ['Next.js, React.js'],
+  photoUrl: 'https://github.com/victorbenedict.png',
+  url: 'https://victorbenedict-portfolio.vercel.app/',
+};
+
 export const navLinks = [
   { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
@@ -188,10 +196,10 @@ export const skills: {
     alt: 'DBeaver logo',
   },
   {
-    label: 'Photopea',
-    url: 'https://www.photopea.com/',
-    icon: './logos/photopea.svg',
-    alt: 'Photopea logo',
+    label: 'Ubuntu',
+    url: 'https://ubuntu.com/',
+    icon: './logos/ubuntu.svg',
+    alt: 'Ubuntu logo',
   },
   {
     label: 'Figma',

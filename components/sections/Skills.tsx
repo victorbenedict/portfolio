@@ -1,13 +1,13 @@
 import { skills } from '@/lib/data';
-import { cn, sectionStyle } from '@/lib/utils';
+import { cn, sectionStyle, sectionTitleStyle } from '@/lib/utils';
 import Image from 'next/image';
 import { Button } from '../ui/button';
 
 export default function Skills() {
   return (
     <section id='skills' className={cn(sectionStyle)}>
-      <h2 className='text-lg font-semibold'>Skills</h2>
-      <div className='grid gap-2 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 py-4'>
+      <h2 className={sectionTitleStyle}>Skills</h2>
+      <div className='grid gap-2 grid-cols-2 sm:grid-cols-3 md:grid-cols-4'>
         {skills.map((props, index) => {
           return (
             <Button
