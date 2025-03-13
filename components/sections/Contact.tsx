@@ -55,14 +55,14 @@ export default function Contact() {
       if (!res.ok) throw new Error(result.error || 'Something went wrong');
 
       toast.success('Message sent!');
-    } catch (error: any) {
-      toast.error(error.message || 'Failed to submit');
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        toast.error(error.message);
+      } else {
+        toast.error('Failed to submit');
+      }
     }
   }
-
-  React.useEffect(() => {
-    console.log('isSubmitting', isSubmitting);
-  }, [isSubmitting]);
 
   return (
     <section id='contact' className={cn(sectionStyle)}>

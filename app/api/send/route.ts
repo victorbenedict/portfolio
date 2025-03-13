@@ -1,4 +1,4 @@
-import NotficationEmail from '@/emails/EmailTemplate';
+import NotificationEmail from '@/emails/EmailTemplate';
 import { admin } from '@/lib/data';
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
@@ -18,12 +18,12 @@ export async function POST(req: Request) {
       );
     }
 
-    const { data } = await resend.emails.send({
-      from: `${admin.name} <onboarding@resend.dev>`,
+    await resend.emails.send({
+      from: `${admin.name || 'Admin'} <onboarding@resend.dev>`, // Fallback for admin.name
       to: email,
       ...(adminEmail ? { bcc: adminEmail } : {}),
       subject: 'Message Received! ✅',
-      react: NotficationEmail({ recipient, recipientMessage }),
+      react: NotificationEmail({ recipient, recipientMessage }),
     });
 
     return NextResponse.json(
@@ -31,6 +31,9 @@ export async function POST(req: Request) {
       { status: 200 }
     );
   } catch (error) {
-    return NextResponse.json({ error: error });
+    return NextResponse.json(
+      { error: error instanceof Error ? error.message : 'Unknown error' },
+      { status: 500 }
+    );
   }
 }

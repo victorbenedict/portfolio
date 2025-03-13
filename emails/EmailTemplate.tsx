@@ -10,7 +10,7 @@ import {
   Text,
 } from '@react-email/components';
 
-interface NotficationEmailProps {
+interface NotificationEmailProps {
   recipient: string;
   recipientMessage: string;
 }
@@ -18,7 +18,7 @@ interface NotficationEmailProps {
 export const NotficationEmail = ({
   recipient,
   recipientMessage,
-}: NotficationEmailProps) => (
+}: NotificationEmailProps) => (
   <Html>
     <Head />
     <Body style={main}>
@@ -62,7 +62,7 @@ NotficationEmail.PreviewProps = {
   recipient: 'Alan',
   recipientMessage:
     'We’re thrilled to offer you the Software Engineer position at TechCorp',
-} as NotficationEmailProps;
+} as NotificationEmailProps;
 
 export default NotficationEmail;
 
