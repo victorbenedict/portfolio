@@ -27,13 +27,13 @@ export default function Experience() {
               >
                 {company}
               </ButtonLink>
-              <div className='italic'>{position}</div>
+              <div className='italic text-sm'>{position}</div>
             </div>
             <div className='md:row-span-2 md:col-span-2 md:col-start-1 md:row-start-1'>
               <div className='text-nowrap'>{`${startDate} - ${endDate}`}</div>
-              <div className='italic'>{location}</div>
+              <div className='italic text-sm'>{location}</div>
             </div>
-            <div className='md:col-span-8 text-start border-b py-4 mb-4'>
+            <div className='md:col-span-8 text-start border-b py-4 mb-4 text-muted-foreground'>
               {description}
             </div>
           </div>
