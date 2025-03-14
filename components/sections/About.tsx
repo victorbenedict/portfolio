@@ -23,12 +23,12 @@ export default function About() {
         priority={true}
         className='rounded-full border'
       />
-      <div>
-        <h1 className='mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-6xl'>
+      <div className='space-y-2.5'>
+        <h1 className='mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-6xl text-center'>
           {admin.name}
         </h1>
         <Separator />
-        <div>
+        <div className='flex flex-col item-center justify-center gap-4'>
           <h2 className='text-lg md:text-xl font-bold text-center'>
             {admin.jobTitle}
           </h2>
@@ -47,15 +47,19 @@ export default function About() {
               );
             })}
           </div>
+          <div className='flex flex-col justify-center items-center sm:flex-row gap-4 '>
+            <ButtonLink href={'#contact'} target='_self' className='w-40'>
+              Contact Me
+            </ButtonLink>
+            <ButtonLink
+              href='./Victor Benedict Bulaong Resume.pdf'
+              download
+              className='w-40'
+            >
+              Download Resume
+            </ButtonLink>
+          </div>
         </div>
-      </div>
-      <div className='flex flex-col sm:flex-row gap-4'>
-        <ButtonLink href={'#contact'} target='_self'>
-          Contact Me
-        </ButtonLink>
-        <ButtonLink href='./Victor Benedict Bulaong Resume.pdf' download>
-          Download Resume
-        </ButtonLink>
       </div>
     </header>
   );

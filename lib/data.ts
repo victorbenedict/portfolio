@@ -233,7 +233,7 @@ export const experiences = [
     company: 'Rubeeks Technologies ',
     companyUrl: 'https://rubeeks.com/',
     position: 'Full-stack Developer',
-    description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem necessitatibus nisi omnis fuga repudiandae assumenda sit libero sint dolor quos autem, accusamus laudantium maxime ut animi non officiis aperiam sed.`,
+    description: `Developed the company's landing page and first software application. Experienced significant growth in programming principles and the software development life cycle. With the guidance of a mentor, we focus on scalability and code efficiency for every product we produce. I continue to optimize project structure and performance to this day.`,
   },
   {
     startDate: '2018',
@@ -242,7 +242,7 @@ export const experiences = [
     company: 'Concentrix',
     companyUrl: 'https://www.concentrix.com/',
     position: 'Senior Technical Advisor',
-    description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae distinctio quae perspiciatis exercitationem amet consectetur, ipsa vero fugiat dignissimos! Beatae ipsum reiciendis quas odit quam blanditiis quod quisquam consectetur consequatur.`,
+    description: `Provided guidance to resolve complex technical issues while maintaining a smooth customer experience. Acted as the escalation point for critical issues, working with technical leads and developers to ensure timely and accurate resolutions. Mentored and supported junior advisors, helping them develop problem-solving skills and technical expertise.`,
   },
   {
     startDate: '2014',
@@ -251,7 +251,7 @@ export const experiences = [
     company: 'Easy World Technology',
     companyUrl: 'https://eworldme.com/',
     position: 'Network Technical Support',
-    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem hic magni modi autem illo earum inventore eius, vel sunt sit optio a quas, minus, recusandae id aliquid tenetur eos totam. Lorem ipsum dolor sit amet consectetur adipisicing elit.`,
+    description: `Provided technical support and implementation for industrial communication products, collaborating with system integrators and sales engineers. Managed product testing, validation, and RMA documentation. Assisted in trade shows with product demos and lead generation.`,
   },
 ];
 

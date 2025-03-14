@@ -4,6 +4,7 @@ import TopBar from '@/components/sections/TopBar';
 import Experience from '@/components/sections/Experience';
 import Projects from '@/components/sections/Projects';
 import Contact from '@/components/sections/Contact';
+import Footer from '@/components/sections/Footer';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Experience />
       <Projects />
       <Contact />
+      <Footer />
     </>
   );
 }
