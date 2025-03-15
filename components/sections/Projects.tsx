@@ -53,18 +53,13 @@ export default function Projects() {
                   <CardHeader>
                     <CardTitle className='justify-between inline-flex flex-row'>
                       <span>{title}</span>
-                      <a
-                        href={url}
-                        target='_blank'
-                        rel='noopener noreferrer'
-                        // className='inline-block'
-                      >
+                      <a href={url} target='_blank' rel='noopener noreferrer'>
                         <FaExternalLinkAlt />
                       </a>
                     </CardTitle>
                     <CardDescription>{description}</CardDescription>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className='flex flex-col justify-center items-center'>
                     <Zoom>
                       <Image
                         className='rounded-md border object-contain drop-shadow-xl'
