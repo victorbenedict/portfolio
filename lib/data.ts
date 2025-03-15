@@ -1,5 +1,7 @@
 import rubeeksImg from '@/public/projects/rubeeks.png';
 import xendinImg from '@/public/projects/xendin.png';
+import qsoundboardImg from '@/public/projects/queue-soundboard.png';
+import portfolioImg from '@/public/projects/portfolio.png';
 import { FaGithub, FaLinkedin, FaGitlab } from 'react-icons/fa';
 
 export const admin = {
@@ -292,6 +294,31 @@ export const projects = [
       'Supabase',
       'Jest',
       'AuthGuard',
+    ],
+  },
+  {
+    title: 'Queue Soundboard',
+    url: 'https://queue-soundboard.vercel.app/',
+    description:
+      'A simple soundboard that plays audio prompts at the tap of a button.',
+    imageSrc: qsoundboardImg,
+    imageAlt: 'Picture of Queue Soundboard App',
+    techStack: ['Next.js', 'Tailwind CSS', 'NextUI', 'Howler.js'],
+  },
+  {
+    title: 'Personal Porfolio',
+    url: 'https://victorbenedict-portfolio.vercel.app/',
+    description:
+      'My portfolio in monochromatic design showcases simple features like a dark/light mode toggle, an auto-play carousel, and an email notification when sending a message.',
+    imageSrc: portfolioImg,
+    imageAlt: 'Picture of Queue Soundboard App',
+    techStack: [
+      'Next.js',
+      'Tailwind CSS',
+      'Shadcn',
+      'React Hook Form',
+      'Resend',
+      'React Medium Image Zoom',
     ],
   },
 ];
