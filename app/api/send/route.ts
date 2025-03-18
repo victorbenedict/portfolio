@@ -9,25 +9,28 @@ const adminEmail = process.env.ADMIN_EMAIL;
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const { name: recipient, email, message: recipientMessage } = body;
+    const { name, email, message } = body;
 
-    if (!recipient || !email || !recipientMessage) {
+    if (!name || !email || !message) {
       return NextResponse.json(
         { error: 'Missing required fields' },
         { status: 400 }
       );
     }
 
+    if (!adminEmail) {
+      throw new Error('ADMIN_EMAIL is not defined in environment variables.');
+    }
+
     await resend.emails.send({
-      from: `${admin.name || 'Admin'} <onboarding@resend.dev>`, // Fallback for admin.name
-      to: email,
-      ...(adminEmail ? { bcc: adminEmail } : {}),
-      subject: 'Message Received! ✅',
-      react: NotificationEmail({ recipient, recipientMessage }),
+      from: `${admin.name || 'Admin'} <onboarding@resend.dev>`,
+      to: adminEmail,
+      subject: 'Message Received from Porfolio',
+      react: NotificationEmail({ name, email, message }),
     });
 
     return NextResponse.json(
-      { message: 'Data received', data: { recipient, email } },
+      { message: 'Data received', data: { name, email, message } },
       { status: 200 }
     );
   } catch (error) {
