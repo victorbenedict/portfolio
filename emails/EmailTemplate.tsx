@@ -1,53 +1,35 @@
-import { admin } from '@/lib/data';
 import {
   Body,
   Container,
   Head,
   Hr,
   Html,
-  Link,
   Preview,
   Text,
 } from '@react-email/components';
 
 interface NotificationEmailProps {
-  recipient: string;
-  recipientMessage: string;
+  name: string;
+  email: string;
+  message: string;
 }
 
 export const NotficationEmail = ({
-  recipient,
-  recipientMessage,
+  name,
+  email,
+  message,
 }: NotificationEmailProps) => (
   <Html>
     <Head />
     <Body style={main}>
-      <Preview>
-        The sales intelligence platform that helps you uncover qualified leads.
-      </Preview>
+      <Preview>You received an message from your portfolio!</Preview>
       <Container style={container}>
-        <Text style={paragraph}>Hi {recipient},</Text>
-        <Text style={paragraph}>
-          Thank you for reaching out through my{' '}
-          <Link href='https://victorbenedict-portfolio.vercel.app/'>
-            portfolio
-          </Link>
-          !
-        </Text>
-        <Text style={paragraph}>Here’s what you sent:</Text>
+        <Text style={paragraph}>Sender name: {name}</Text>
+        <Text style={paragraph}>Sender email: {email}</Text>
+        <Text style={paragraph}>Message:</Text>
         <Container style={messageContainer}>
-          <Text style={messageStyle}>{recipientMessage}</Text>
+          <Text style={messageStyle}>{message}</Text>
         </Container>
-
-        <Text style={paragraph}>
-          I’ll review your message and get back to you soon.
-        </Text>
-        <Text style={paragraph}>
-          All the best,
-          <br />
-          Victor Benedict
-        </Text>
-
         <Hr style={hr} />
         <Text style={footer}>
           This email is an automated notification. Please do not reply to this
@@ -59,8 +41,9 @@ export const NotficationEmail = ({
 );
 
 NotficationEmail.PreviewProps = {
-  recipient: 'Alan',
-  recipientMessage:
+  name: 'Alan',
+  email: 'alan@email.com',
+  message:
     'We’re thrilled to offer you the Software Engineer position at TechCorp',
 } as NotificationEmailProps;
 
