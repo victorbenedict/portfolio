@@ -261,7 +261,7 @@ export const projects = [
   {
     title: 'Rubeeks Web',
     url: 'https://rubeeks.com/',
-    description: `A static single page represents the startup company's services and its founders. It features an email subscription form, a database, and web analytics.`,
+    description: `I converted the design from Figma to Next.js components and implemented an email subscription feature using Supabase and Resend. I learned a lot from building this website, including React and Tailwind fundamentals, NPM package integration, design patterns, SOLID principles, and the development lifecycle.`,
     imageSrc: rubeeksImg,
     imageAlt: 'Picture of Rubeeks website',
     techStack: [
@@ -279,7 +279,7 @@ export const projects = [
     title: 'Xendin Invoice App',
     url: 'https://dev.xendin.com/',
     description:
-      'Invoice software for small businesses that generates digital invoices. It includes the management of customer data, products, and payments.',
+      'I gained backend experience with Nest.js and TypeORM by creating database tables, seeding data, handling authentication/authorization, and writing tests. On the frontend, I built both presentational (dumb) and container (smart) components with Storybook integration. I also worked with dynamic queries and APIs that followed OOP design principles.',
     imageSrc: xendinImg,
     imageAlt: 'Picture of Xendin App',
     techStack: [
@@ -300,7 +300,7 @@ export const projects = [
     title: 'Queue Soundboard',
     url: 'https://queue-soundboard.vercel.app/',
     description:
-      'A simple soundboard that plays audio prompts at the tap of a button.',
+      'Built the entire application for our small coffee business. It went through several revisions, and I still have more improvements planned.',
     imageSrc: qsoundboardImg,
     imageAlt: 'Picture of Queue Soundboard App',
     techStack: ['Next.js', 'Tailwind CSS', 'NextUI', 'Howler.js'],
@@ -309,7 +309,7 @@ export const projects = [
     title: 'Personal Porfolio',
     url: 'https://victorbenedict-portfolio.vercel.app/',
     description:
-      'My portfolio in monochromatic design showcases simple features like a dark/light mode toggle, an auto-play carousel, and an email notification when sending a message.',
+      'My portfolio, designed with a monochromatic theme, features a dark/light mode toggle, an autoplay carousel, and email notifications for messages. I built it by applying what I learned from the Rubeeks website.',
     imageSrc: portfolioImg,
     imageAlt: 'Picture of Queue Soundboard App',
     techStack: [
