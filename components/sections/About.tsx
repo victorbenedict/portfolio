@@ -1,7 +1,7 @@
 import { Separator } from '@/components/ui/separator';
 import { admin, socialLinks } from '@/lib/data';
 import { cn, sectionStyle } from '@/lib/utils';
-import Image from 'next/image';
+// import Image from 'next/image';
 import ButtonLink from '../ButtonLink';
 import { buttonVariants } from '@/components/ui/button';
 import Link from 'next/link';
@@ -15,14 +15,14 @@ export default function About() {
         'flex flex-col gap-8 justify-start items-center'
       )}
     >
-      <Image
+      {/* <Image
         src={admin.photoUrl}
         alt={`Photo of ${admin.name}`}
         width={150}
         height={150}
         priority={true}
         className='rounded-full border'
-      />
+      /> */}
       <div className='space-y-2.5'>
         <h1 className='mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-6xl text-center'>
           {admin.name}
