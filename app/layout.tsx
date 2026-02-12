@@ -14,8 +14,21 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Victor Benedict",
-  description: "Web Developer",
+  metadataBase: new URL("https://victorbenedict-portfolio.vercel.app/"),
+  title: {
+    default: "Victor Benedict Bulaong",
+    template: "%s | Victor Benedict Bulaong",
+  },
+  description: "Official website of Victor Benedict Bulaong.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    title: "Victor Benedict Bulaong",
+    description: "Official website of Victor Benedict Bulaong.",
+    url: "https://victorbenedict-portfolio.vercel.app/",
+  },
 };
 
 export default function RootLayout({
