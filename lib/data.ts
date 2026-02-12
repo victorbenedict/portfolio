@@ -310,7 +310,7 @@ export const projects = [
     title: "Alumni Website",
     url: "https://www.notredamegsc.org/",
     description:
-      "A alumni website with paid membership, shop and blog. Migrated and rebuilt the old website from Ionos to Workdpress. Customized components by hard coding javascript and css. Created custom hooks with woocommerce and ultimate member to implement paid membership feature. Built PDF generator for certificates and ID using NodeJs and Puppeteer.",
+      "A alumni website with paid membership, shop and blog. Migrated and rebuilt the old website from Ionos to Wordpress. Customized components by hard coding javascript and css. Created custom hooks with woocommerce and ultimate member to implement paid membership feature. Built PDF generator for certificates and ID using NodeJs and Puppeteer.",
     image: "/projects/ndgensan.png",
     technologies: [
       "Wordpress",
