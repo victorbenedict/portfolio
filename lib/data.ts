@@ -367,6 +367,6 @@ export const projects = [
     image: "/projects/queue-soundboard.png",
     technologies: ["Next.js", "Tailwind CSS", "NextUI", "Howler.js"],
     features: ["Audio"],
-    github: undefined,
+    github: "https://github.com/victorbenedict/queue-soundboard",
   },
 ];

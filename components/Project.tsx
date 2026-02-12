@@ -1,10 +1,9 @@
+"use client";
 import { projects } from "@/lib/data";
+import { ExternalLink } from "lucide-react";
 import Image from "next/image";
-import "swiper/css";
-import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Github, ExternalLink } from "lucide-react";
 
 export function Projects() {
   return (
@@ -19,14 +18,23 @@ export function Projects() {
           <div className="w-20 h-1 bg-linear-to-r from-blue-400 to-purple-500 mx-auto rounded-full" />
         </div>
         <Swiper
-          pagination={true}
-          modules={[Pagination]}
-          className="max-w-4xl mx-auto pb-12 "
+          autoHeight={true}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={true}
+          modules={[Autoplay, Pagination, Navigation]}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          loop={true}
+          className="max-w-4xl mySwiper"
         >
           {projects.map((project, index) => (
-            <SwiperSlide key={index} className="p-2">
-              <div key={index} className="group h-95/100">
-                <div className="h-full pb-6 bg-slate-800/30 border border-slate-700/50 rounded-xl overflow-hidden backdrop-blur-sm hover:border-blue-500/50 transition-all ">
+            <SwiperSlide key={index}>
+              <div key={index} className="group">
+                <div className="bg-slate-800/30 border border-slate-700/50 rounded-xl overflow-hidden backdrop-blur-sm hover:border-blue-500/50 transition-all ">
                   {/* Project Image */}
                   <div className="relative left-0 lg:left-8 h-64 sm:h-80 group-hover:scale-110 transition-transform duration-700">
                     <Image
@@ -79,7 +87,13 @@ export function Projects() {
                           rel="noopener noreferrer"
                           className="flex items-center gap-2 px-4 py-2 bg-slate-700/50 hover:bg-slate-600/50 border border-slate-600/50 rounded-lg text-slate-300 hover:text-white transition-all hover:scale-105"
                         >
-                          <Github className="w-4 h-4" />
+                          <Image
+                            src={"/logos/github.svg"}
+                            alt={"Github Logo"}
+                            width={20}
+                            height={20}
+                            className="w-5 h-5 object-contain"
+                          />
                           Code
                         </a>
                       )}
