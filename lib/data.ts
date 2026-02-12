@@ -151,6 +151,12 @@ export const skills: {
     alt: "Resend logo",
   },
   {
+    label: "Puppeteer",
+    url: "https://pptr.dev/",
+    src: "/logos/puppeteer.png",
+    alt: "Puppeteer logo",
+  },
+  {
     label: "Storybook",
     url: "https://storybook.js.org/",
     src: "/logos/storybook.svg",
@@ -285,7 +291,7 @@ export const projects = [
   {
     title: "Rubeeks Web",
     url: "https://rubeeks.com/",
-    description: `Converted figma design to React components. Implement Resend and Supabase to store subscribers`,
+    description: `A company landing page with subscription form. Converted figma design to React components. Implement Resend and Supabase to store subscribers`,
     image: "/projects/rubeeks.png",
     technologies: [
       "Next.js",
@@ -304,7 +310,7 @@ export const projects = [
     title: "Alumni Website",
     url: "https://www.notredamegsc.org/",
     description:
-      "Migrated and rebuilt the old website from Ionos to Workdpress. Customized components by hard coding javascript and css. Created custom hooks with woocommerce and ultimate member to implement paid membership feature. Built PDF generator for certificates and ID using NodeJs and Puppeteer.",
+      "A alumni website with paid membership, shop and blog. Migrated and rebuilt the old website from Ionos to Workdpress. Customized components by hard coding javascript and css. Created custom hooks with woocommerce and ultimate member to implement paid membership feature. Built PDF generator for certificates and ID using NodeJs and Puppeteer.",
     image: "/projects/ndgensan.png",
     technologies: [
       "Wordpress",
@@ -315,13 +321,19 @@ export const projects = [
       "NodeJs",
       "Puppeteer",
     ],
-    features: ["Blog", "Shop", "Custom Memberships", "Custom PDF Generator"],
+    features: [
+      "Responsive",
+      "Blog",
+      "Shop",
+      "Custom Memberships",
+      "Custom PDF Generator",
+    ],
     github: undefined,
   },
   {
     title: "Kayuno Landing",
     url: "https://www.kayuno.com/",
-    description: `Converted figma design to React components. Implement Resend and Supabase to store subscribers. Built app demo using Storylane.`,
+    description: `An app landing page with subscription form and product demo. Converted figma design to React components. Implement Resend and Supabase to store subscribers. Built app demo using Storylane.`,
     image: "/projects/kayuno.png",
     technologies: ["Next.js", "Tailwind CSS", "Supabase"],
     features: ["Responsive", "Subscription Form", "Storylane"],
@@ -330,7 +342,8 @@ export const projects = [
   {
     title: "Kayuno App",
     url: "https://www.kayuno.com/",
-    description: "Built both backend and frontend",
+    description:
+      "A project management app for small business. Built both backend and frontend",
     image: "/projects/kayuno-app.png",
     technologies: [
       "Next.js",
@@ -350,10 +363,10 @@ export const projects = [
   {
     title: "Queue Soundboard",
     url: "https://queue-soundboard.vercel.app/",
-    description: "Built an order announcement app for our business.",
+    description: "An order soundboard app for our business.",
     image: "/projects/queue-soundboard.png",
     technologies: ["Next.js", "Tailwind CSS", "NextUI", "Howler.js"],
-    features: [],
+    features: ["Audio"],
     github: undefined,
   },
 ];

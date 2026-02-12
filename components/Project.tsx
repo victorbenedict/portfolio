@@ -91,7 +91,7 @@ export function Projects() {
                           className="flex items-center gap-2 px-4 py-2 bg-linear-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white rounded-lg transition-all hover:scale-105"
                         >
                           <ExternalLink className="w-4 h-4" />
-                          Live Demo
+                          View Site
                         </a>
                       )}
                     </div>
