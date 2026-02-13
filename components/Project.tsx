@@ -97,7 +97,7 @@ export function Projects() {
                           Code
                         </a>
                       )}
-                      {project.url && (
+                      {project.url ? (
                         <a
                           href={project.url}
                           target="_blank"
@@ -107,6 +107,10 @@ export function Projects() {
                           <ExternalLink className="w-4 h-4" />
                           View Site
                         </a>
+                      ) : (
+                        <div className="px-3 py-2 rounded-md bg-slate-600/30 text-sm text-slate-400">
+                          Under Construction
+                        </div>
                       )}
                     </div>
                   </div>

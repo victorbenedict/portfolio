@@ -341,7 +341,7 @@ export const projects = [
   },
   {
     title: "Kayuno App",
-    url: "https://www.kayuno.com/",
+    url: undefined,
     description:
       "A project management app for small business. Built both backend and frontend",
     image: "/projects/kayuno-app.png",
