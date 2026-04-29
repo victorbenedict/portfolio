@@ -17,7 +17,7 @@ export function About() {
         <div className="mx-auto space-y-6 text-center max-w-2xl">
           <p className="text-lg text-slate-300 leading-relaxed">
             I am a <strong>web developer</strong> from the Philippines and
-            co-founder of{" "}
+            working at{" "}
             <Link
               href={"https://www.rubeeks.com/"}
               target="_blank"
